@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// let element = <h1>Welcome Back Arvind</h1> // JSX Code Browser doesn't understand this code it's understand only JS code
+// let element = React.createElement('h1', {}, 'Welcome back Arvind'); // This is the Java Script Code
+// ReactDOM.render(App, document.getElementById("root"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// if component we have used just like html elemenet
+// ReactDOM.render(<App></App>, document.getElementById('root'));
+
+ReactDOM.render(<App />, document.getElementById("root"));
