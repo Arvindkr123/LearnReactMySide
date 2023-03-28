@@ -1,4 +1,5 @@
 import React from "react";
+import pt from 'prop-types'
 
 // functional based props
 // const Student = (props) => {
@@ -21,5 +22,13 @@ class Student extends React.Component {
     );
   }
 }
+Student.propTypes = {
+    name:pt.string.isRequired,
+    roll:pt.number.isRequired
+}
+
+Student.defaultProps = {
+    name : 'Akshita'
+};
 
 export default Student;
