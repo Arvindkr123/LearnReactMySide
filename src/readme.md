@@ -10,4 +10,6 @@
     <p>Unmounting is the process of removing components from the DOM</p>
 <ul>
 <h3>Below visual view</h3>
-![LearnReactMySide]('src\img\Screenshot (157).png')
+
+![](./img/Screenshot%20(157).png)
+![](./img/Screenshot%20(158).png)
