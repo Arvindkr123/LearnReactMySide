@@ -1,42 +1,17 @@
-import React, { Component } from "react";
+import React from 'react'
 
-// export class Student extends Component {
-//   // handleEvent(){
-//   //   console.log('button clicked', this)
-//   // }
-//   handleEvent = ()=> {
-//     console.log('button clicked', this)
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <h1>Event called</h1>
-//         <button onClick={()=>this.handleEvent()}>Click me</button>
-//       </div>
-//     );
-//   }
-// }
-
-class Student extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      name:'Arvind Kumar',
-      roll:this.props.roll
-    }
-    this.handleEvent = this.handleEvent.bind(this);
+const Student = (props) => {
+  function handleEvent(e){
+    e.preventDefault();
+    console.log('button clicked')
   }
-  handleEvent(){
-    console.log('button clicked', this)
-  }
-  render(){
-    return(
-      <div>
-        <h1>hello {this.state.name} and your roll no is {this.state.roll}</h1>
-        <button onClick={this.handleEvent}>click me</button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <h1>Your name is Arvind and roll no is {props.roll}</h1>
+      <button onClick={handleEvent}>Click Me</button>
+      <a href='https://www.google.com' onClick={handleEvent}>Click Me</a>
+    </div>
+  )
 }
 
 export default Student;
