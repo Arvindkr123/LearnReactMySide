@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-// const Student = (props) => {
-//   return (
-//     <div>
-//       <h1>hello Arvind {props.children}</h1>
-//     </div>
-//   )
+
+// State without constructor
+// class Student extends Component {
+//   state ={
+//     name :"Arvind",
+//     roll:this.props.roll
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>hello {this.state.name} and your roll no is {this.state.roll}</h1>
+//       </div>
+//     )
+//   }
 // }
 
-class Student extends React.Component{
-  render(){
-    return(
+// state with constructor
+class Student extends Component {
+  constructor(props){
+    super(props);
+    this.state ={
+      name :"Arvind",
+      roll:this.props.roll
+    }
+
+  }
+  render() {
+    return (
       <div>
-        <h1>this.props.children</h1>
+        <h1>hello {this.state.name} and your roll no is {this.state.roll}</h1>
       </div>
     )
   }
