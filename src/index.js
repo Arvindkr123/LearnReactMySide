@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Student from './Student';
+import Student from './Student'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Student roll={1819510002}/>)
-
+ReactDOM.createRoot(document.getElementById('root')).render(<Student roll={101}/>)
