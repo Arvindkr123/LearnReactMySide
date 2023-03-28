@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 
-// let ele = <h1>Welcome back Arvind</h1>
-// export default ele;
-
-const App = () => {
-  return (
-    <div>
-      <h1>Welcome back Arvind</h1>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+    //   <Fragment>
+    //     <h1>Welcome back Arvind</h1>
+    //     <h1>Welcome back Arvind</h1>;
+    //   </Fragment>
+      <> 
+        <h1>Welcome back Arvind</h1>
+        <h1>Welcome back Arvind</h1>;
+      </>
+    );
+  }
 }
 
-export default App
+export default App;
