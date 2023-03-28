@@ -1,20 +1,17 @@
 import React from "react";
-import Student from "./Student";
-function App() {
-  const ele = 'Arvind Kumar'
-  const obj = {
-    firstName :'Ram Kumar'
-  }
+import ReactDOM from 'react-dom';
+import './App.css'
 
-  function show(){
-    console.log('I\'m show function')
-  }
+function App() {
   return (
-    <div>
-      <h1>Name is {ele}</h1>
-      <h1>10 + 20 = {10 + 20}</h1>
-      <h1>obj firstName {obj.firstName}</h1>
-      <h1>{show()}</h1>
+    <div className="bg">
+      <h1>Welcome to my React 18 App!</h1>
+      <p>Here's some new exciting features of React 18:</p>
+      <ul>
+        <li>Automatic batching of state updates</li>
+        <li>Suspense for data fetching and lazy loading</li>
+        <li>Improved server-side rendering</li>
+      </ul>
     </div>
   );
 }
