@@ -11,5 +11,6 @@
 <ul>
 <h3>Below visual view</h3>
 
-![](./img/Screenshot%20(157).png)
-![](./img/Screenshot%20(158).png)
+![](https://github.com/Arvindkr123/LearnReactMySide/blob/12%25%25%25%25PhaseOfComponent/src/img/Screenshot%20(157).png)
+
+![](https://github.com/Arvindkr123/LearnReactMySide/blob/12%25%25%25%25PhaseOfComponent/src/img/Screenshot%20(158).png)
