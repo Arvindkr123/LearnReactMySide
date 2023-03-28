@@ -1,34 +1,49 @@
 import React, { Component } from "react";
 
-export class Student extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "Viru",
-      roll: this.props.roll,
-    };
-  }
+// export class Student extends Component {
+//   state ={
+//     id :1,
+//     name :'Arvind'
+//   }
+//   handleEvent =(id, e)=>{
+//     // console.log('button clicked',id)
+//     console.log(id,e)
+//   }
 
-  handleEvent = () => {
-    this.setState({ name: "Jai" , roll:102});
-    console.log('button clicked ', this)
+//   handleEventArg=(e)=>{
+//     this.handleEvent(this.state.id, e);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>hello {this.state.name}</h1>
+//         <button onClick={this.handleEventArg}>Update</button>
+//       </div>
+//     )
+//   }
+// }
+export class Student extends Component {
+  state = {
+    id: 1,
+    name: "Arvind",
   };
-  // handleEvent = () => {
-  //   this.setState((state, props) => {
-      // console.log(state)
-      // console.log(props)
-      // state.name = 'Jai'
-      // state.roll = 102
-    // });
-    // console.log('button clicked ', this)
-  // };
+  handleEvent = (id, e) => {
+    // console.log('button clicked',id)
+    console.log(id, e);
+  };
+
   render() {
     return (
       <div>
-        <h1>
-          Hello {this.state.name} and your roll number is {this.state.roll}
-        </h1>
-        <button onClick={this.handleEvent}>Update Name</button>
+        <h1>hello {this.state.name}</h1>
+        {/* <button
+          onClick={(e) => {
+            this.handleEvent(e,this.state.id);
+          }}
+        > */}
+        <button onClick={this.handleEvent.bind(this, this.state.id)}>
+          Update
+        </button>
       </div>
     );
   }
