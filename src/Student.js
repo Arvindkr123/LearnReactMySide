@@ -1,35 +1,39 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-
-// State without constructor
-// class Student extends Component {
-//   state ={
-//     name :"Arvind",
-//     roll:this.props.roll
+// export class Student extends Component {
+//   // handleEvent(){
+//   //   console.log('button clicked', this)
+//   // }
+//   handleEvent = ()=> {
+//     console.log('button clicked', this)
 //   }
 //   render() {
 //     return (
 //       <div>
-//         <h1>hello {this.state.name} and your roll no is {this.state.roll}</h1>
+//         <h1>Event called</h1>
+//         <button onClick={()=>this.handleEvent()}>Click me</button>
 //       </div>
-//     )
+//     );
 //   }
 // }
 
-// state with constructor
-class Student extends Component {
+class Student extends React.Component{
   constructor(props){
     super(props);
-    this.state ={
-      name :"Arvind",
+    this.state={
+      name:'Arvind Kumar',
       roll:this.props.roll
     }
-
+    this.handleEvent = this.handleEvent.bind(this);
   }
-  render() {
-    return (
+  handleEvent(){
+    console.log('button clicked', this)
+  }
+  render(){
+    return(
       <div>
         <h1>hello {this.state.name} and your roll no is {this.state.roll}</h1>
+        <button onClick={this.handleEvent}>click me</button>
       </div>
     )
   }
