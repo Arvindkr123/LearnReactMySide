@@ -18,8 +18,8 @@ export default class App extends Component {
         <ul>
           {this.state.users.map((user) => {
             return (
-              <li>
-               Id {user.id} Name {user.name} Password {user.password}
+              <li key={user.id}>
+                Id {user.id} Name {user.name} Password {user.password}
               </li>
             );
           })}
