@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [name, setName] = useState("Arvind Kumar");
-  const [roll, setRoll] = useState(1);
-  const handleClick = ()=>{
-    setName('Krishna Thakur');
-    setRoll(2);
-  }
+  const [count, setCount] = useState(1);
+  const [count1, setCount1] = useState(50);
+  useEffect(() => {
+    console.log("UseEffect rendered");
+  },[count]);
   return (
-    <div>
-      <h1>UseState hoock in react </h1>
-      <h1>My name is {name} and your roll number {roll}</h1>
-      {/* <button onClick={()=>setName('Krishna Thakur')}>Update Name</button> */}
-      <button onClick={handleClick}>Update Name</button>
-    </div>
+    <>
+      <h1>count {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Update Count</button>
+      <h1>count1 {count1}</h1>
+      <button onClick={() => setCount1(count1 - 1)}>Decrease Count</button>
+    </>
   );
 };
 
