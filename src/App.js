@@ -10,21 +10,19 @@ export default class App extends Component {
     isLoggedIn: false,
   };
   render() {
+    // const newUser = this.state.users.map((user)=>{
+    //   return <><h1><li>{user.id} {user.name} {user.password}</li></h1></>
+    // })
     return (
       <>
         <ul>
-          <h1>
-            Id : {this.state.users[0].id} Name : {this.state.users[0].name}{" "}
-            password:{this.state.users[0].password}
-          </h1>
-          <h1>
-            Id : {this.state.users[1].id} Name : {this.state.users[1].name}{" "}
-            password:{this.state.users[1].password}
-          </h1>
-          <h1>
-            Id : {this.state.users[2].id} Name : {this.state.users[2].name}{" "}
-            password:{this.state.users[2].password}
-          </h1>
+          {this.state.users.map((user) => {
+            return (
+              <li>
+               Id {user.id} Name {user.name} Password {user.password}
+              </li>
+            );
+          })}
         </ul>
       </>
     );
