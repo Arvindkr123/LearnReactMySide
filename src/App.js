@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
+import useCustomCounter from './Custom';
 
 const App = () => {
-  const [count, setCount] = useState(1);
-  const [count1, setCount1] = useState(50);
-  useEffect(() => {
-    console.log("UseEffect rendered");
-  },[count]);
+  const data = useCustomCounter();
+  const data1 = useCustomCounter();
   return (
     <>
-      <h1>count {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Update Count</button>
-      <h1>count1 {count1}</h1>
-      <button onClick={() => setCount1(count1 - 1)}>Decrease Count</button>
+    <h1>count {data.count}</h1>
+    <button type='button' onClick={data.handleIncremnet}>increment count</button>
+    <h1>count1 {data1.count}</h1>
+    <button type='button' onClick={data1.handleIncremnet}>increment count</button>
     </>
-  );
-};
+  )
+}
 
 export default App;
+
