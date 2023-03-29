@@ -1,52 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
+import Marks from './Marks'
 
-// export class Student extends Component {
-//   state ={
-//     id :1,
-//     name :'Arvind'
-//   }
-//   handleEvent =(id, e)=>{
-//     // console.log('button clicked',id)
-//     console.log(id,e)
-//   }
-
-//   handleEventArg=(e)=>{
-//     this.handleEvent(this.state.id, e);
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <h1>hello {this.state.name}</h1>
-//         <button onClick={this.handleEventArg}>Update</button>
-//       </div>
-//     )
-//   }
-// }
-export class Student extends Component {
-  state = {
-    id: 1,
-    name: "Arvind",
-  };
-  handleEvent = (id, e) => {
-    // console.log('button clicked',id)
-    console.log(id, e);
-  };
-
+export default class Student extends Component {
   render() {
+    console.log('Student Rendered called')
     return (
       <div>
-        <h1>hello {this.state.name}</h1>
-        {/* <button
-          onClick={(e) => {
-            this.handleEvent(e,this.state.id);
-          }}
-        > */}
-        <button onClick={this.handleEvent.bind(this, this.state.id)}>
-          Update
-        </button>
+        <h2>Hello , {this.props.name}</h2>
+        <Marks marks={101}/>
       </div>
-    );
+    )
   }
 }
 
-export default Student;

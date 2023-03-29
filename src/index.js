@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Student from './Student'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Student/>)
+ReactDOM.createRoot(document.getElementById("root")).render(<App name="Arvind"/>);
