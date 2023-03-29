@@ -1,52 +1,17 @@
 import React, { Component } from "react";
-import Guest from "./Guest";
-import User from "./User";
 
 export default class App extends Component {
-  state = {
-    isLoggedIn: false,
-  };
-
-  clickLogOut = () => {
-    this.setState({ isLoggedIn: false });
-  };
-  clickLogin = () => {
-    this.setState({ isLoggedIn: true });
-  };
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    let consumer;
-    // if (isLoggedIn) {
-    //   return <User data={this.clickLogOut} />;
-    // } else {
-    //   return <Guest data={this.clickLogin} />;
-    // }
-    // if (isLoggedIn) {
-    //   consumer = <User data={this.clickLogOut} />;
-    // } else {
-    //   consumer = <Guest data={this.clickLogin} />;
-    // }
-    // return <>{consumer}</>
-    // return (
-    //   <>
-    //     {isLoggedIn ? (
-    //       <User data={this.clickLogOut} />
-    //     ) : (
-    //       <Guest data={this.clickLogin} />
-    //     )}
-    //   </>
-    // );
-
-    // IIFE function
+    const arr = [10, 20, 30, 40, 50];
     return (
       <>
-        {(() => {
-          if (isLoggedIn) {
-            return <User data={this.clickLogOut} />;
-          } else {
-            return <Guest data={this.clickLogin} />;
-          }
-        })()}
+        <ul>
+          <li>{arr[0] * 2}</li>
+          <li>{arr[1] * 2}</li>
+          <li>{arr[2] * 2}</li>
+          <li>{arr[3] * 2}</li>
+          <li>{arr[4] * 2}</li>
+        </ul>
       </>
     );
   }
