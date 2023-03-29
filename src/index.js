@@ -1,6 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App"; 
+import ReactDOM from "react-dom";
 import Student from "./Student";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Student/>);
+ReactDOM.render(<App/>, document.getElementById('root'))
+ReactDOM.render(<Student/>, document.getElementById('stu'))
+
+
+// ReactDOM.unmountComponentAtNode(document.getElementById("root"));
