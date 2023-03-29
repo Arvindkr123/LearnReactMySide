@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
+import React, { useState } from "react";
 
-export default class App extends Component {
-  componentDidMount(){
-    console.log('App mounted')
+const App = () => {
+  const [name, setName] = useState("Arvind Kumar");
+  const [roll, setRoll] = useState(1);
+  const handleClick = ()=>{
+    setName('Krishna Thakur');
+    setRoll(2);
   }
+  return (
+    <div>
+      <h1>UseState hoock in react </h1>
+      <h1>My name is {name} and your roll number {roll}</h1>
+      {/* <button onClick={()=>setName('Krishna Thakur')}>Update Name</button> */}
+      <button onClick={handleClick}>Update Name</button>
+    </div>
+  );
+};
 
-  componentWillUnmount(){
-    console.log('App componentWillUnMount')
-  }
-  render() {
-    console.log('App rendered')
-    return (
-      <div>
-          <h1>hello App Component mount </h1>
-      </div>
-    )
-  }
-}
+export default App;
