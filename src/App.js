@@ -37,6 +37,7 @@ export default class App extends Component {
     //   </>
     // );
 
+    // IIFE function
     return (
       <>
         {(() => {
