@@ -27,13 +27,25 @@ export default class App extends Component {
     //   consumer = <Guest data={this.clickLogin} />;
     // }
     // return <>{consumer}</>
+    // return (
+    //   <>
+    //     {isLoggedIn ? (
+    //       <User data={this.clickLogOut} />
+    //     ) : (
+    //       <Guest data={this.clickLogin} />
+    //     )}
+    //   </>
+    // );
+
     return (
       <>
-        {isLoggedIn ? (
-          <User data={this.clickLogOut} />
-        ) : (
-          <Guest data={this.clickLogin} />
-        )}
+        {(() => {
+          if (isLoggedIn) {
+            return <User data={this.clickLogOut} />;
+          } else {
+            return <Guest data={this.clickLogin} />;
+          }
+        })()}
       </>
     );
   }
