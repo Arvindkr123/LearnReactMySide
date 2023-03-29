@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class App extends Component {
   render() {
-    const styleBtn = {
-      backgroundColor: 'blue',
-      color: 'white',
-      padding: '10px',
-      margin: '10px'
-    }
+    const textc = {
+      color: "blue", 
+    };
+    const texts = {
+      fontSize: "80px",
+    };
     return (
       <>
-        <h1>Hello Styling in React</h1>
-        <button style={styleBtn}>click me</button>
+        <h1 style={{ ...textc, ...texts, ...{backgroundColor:"yellow"} }}>Hello App</h1>
       </>
-    )
+    );
   }
 }
