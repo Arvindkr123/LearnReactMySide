@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import style from "./App.module.css"
-import User from './User'
 
 export default class App extends Component {
   render() {
     return (
       <>
-        <h1 className={style.textb}>Hello App</h1>
-        <User/>
+      <img src={process.env.PUBLIC_URL+"./nikhil-uttam-zbr_TrIhUH4-unsplash.jpg"}
+      alt="myPic" width={500}/>
       </>
     )
   }
