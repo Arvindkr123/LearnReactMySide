@@ -1,15 +1,12 @@
-import React, { Component } from "react";
-import "../src/App.css";
-import User from "./User";
+import React, { Component } from 'react'
+import "./App.css"
 
 export default class App extends Component {
   render() {
-    let style = false;
     return (
       <>
-        <h1 className="textb">Hello App</h1>
-        <User rang={style?"textb":"textg"}/>
+        <h1 className='textb texts'>Hello App</h1>
       </>
-    );
+    )
   }
 }
