@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./User.css";
+import "../src/App.css";
 
 export default class User extends Component {
   render() {
     return (
       <>
-        <h2 className="txt1">Hello User</h2>
+        <h1 className={this.props.rang}>Hello User</h1>
       </>
     );
   }
