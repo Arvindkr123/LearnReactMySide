@@ -1,12 +1,10 @@
 import React from "react";
-
-// let ele = <h1>Welcome back Arvind</h1>
-// export default ele;
+import Form from "./components/Form";
 
 const App = () => {
   return (
     <div>
-      <h1>Welcome back Arvind</h1>
+      <Form/>
     </div>
   )
 }
