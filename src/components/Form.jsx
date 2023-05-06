@@ -2,15 +2,54 @@ import React, { useState } from 'react'
 
 const Form = () => {
     const [name, setName] = useState('Arvind K')
+    const [password, setPassword] = useState('ahjbdfasd')
+    const changeHandler = (e) => {
+        if (e.target.name === 'name') {
+            setName(e.target.value)
+            console.log(name)
+        } else {
+            setPassword(e.target.value)
+            console.log(password)
+        }
+    }
     return (
         <form>
-            <h1>Controlled Components</h1>
-            <textarea type="text" value={name} onChange={(e) => setName(e.target.value.toUpperCase())} />
+            <h1>Controlled Multiple Input Elements</h1>
+            <label>
+                Name :  <input type="text" name='name' value={name} onChange={changeHandler} />
+            </label><br /><br />
+            <label>
+                Password :  <input type='password' name='password' value={password} onChange={changeHandler} />
+            </label><br /><br />
         </form>
     )
 }
 
 export default Form;
+
+// const Form = () => {
+//     const [name, setName] = useState('Arvind K')
+//     const [password, setPassword] = useState('ahjbdfasd')
+//     const NameHandler = (e) => {
+//         setName(e.target.value)
+//     }
+//     const PassHandler = (e) => {
+//         setPassword(e.target.value)
+//     }
+//     return (
+//         <form>
+//             <h1>Controlled Multiple Input Elements</h1>
+//             <label>
+//                 Name :  <input type="text" name='name' value={name} onChange={NameHandler} />
+//             </label><br /><br />
+//             <label>
+//                 Password :  <input type='password' name='password' value={password} onChange={PassHandler} />
+//             </label><br /><br />
+//         </form>
+//     )
+// }
+
+// export default Form;
 // const Form = () => {
 //     const [name, setName] = useState('Arvind K')
 //     return (
