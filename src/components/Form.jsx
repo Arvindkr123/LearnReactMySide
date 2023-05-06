@@ -5,12 +5,23 @@ const Form = () => {
     return (
         <form>
             <h1>Controlled Components</h1>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value.toUpperCase().substring(0, 16))} />
+            <textarea type="text" value={name} onChange={(e) => setName(e.target.value.toUpperCase())} />
         </form>
     )
 }
 
 export default Form;
+// const Form = () => {
+//     const [name, setName] = useState('Arvind K')
+//     return (
+//         <form>
+//             <h1>Controlled Components</h1>
+//             <input type="text" value={name} onChange={(e) => setName(e.target.value.toUpperCase().substring(0, 16))} />
+//         </form>
+//     )
+// }
+
+// export default Form;
 
 
 
